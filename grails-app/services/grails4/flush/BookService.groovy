@@ -11,7 +11,7 @@ class BookService {
     void run() {
         new Book(title: "NiravBook").save()
         new Book(title: "RobBook").save()
-        //sessionFactory.getCurrentSession().flush()
+        sessionFactory.getCurrentSession().flush()
         Book book = Book.findByTitle("NiravBook")
         println book.title
     }
